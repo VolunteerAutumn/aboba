@@ -85,3 +85,57 @@ img {
 .header a:hover {
   text-decoration: underline;
 }
+
+/* ===========================
+   LOGIN FORM
+=========================== */
+
+form {
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 25px;
+
+  background: white;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 14px;
+  box-sizing: border-box;
+
+  transition: border 0.2s;
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid #3498db;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+
+  background-color: #3498db;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background-color: #2980b9;
+}
