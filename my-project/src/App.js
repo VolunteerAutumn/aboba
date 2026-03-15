@@ -3,6 +3,19 @@ import flag from "./Flag_of_Rivne.svg.png";
 import zoo from "./zoo.jpg";
 import "./App.css";
 
+import liceum1 from "./liceum1.png";
+import liceum2 from "./liceum2.png";
+import liceum3 from "./liceum3.png";
+import liceum4 from "./liceum4.png";
+import liceum5 from "./liceum5.png";
+import liceum6 from "./liceum6.png";
+import liceum7 from "./liceum7.png";
+import liceum8 from "./liceum8.png";
+import liceum9 from "./liceum9.png";
+import liceum10 from "./liceum10.png";
+import liceum11 from "./liceum11.png";
+import liceum12 from "./liceum12.png";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,7 +28,7 @@ import {
 } from "react-router-dom";
 
 /* ===========================
-AUTH COMPONENTS
+AUTH
 =========================== */
 
 function Login({ setAuth }) {
@@ -38,6 +51,7 @@ function Login({ setAuth }) {
 
   return(
     <section>
+
       <h1>Login</h1>
 
       <form onSubmit={handleLogin}>
@@ -67,6 +81,7 @@ function Login({ setAuth }) {
         <Link to="/register">Create account</Link>
 
       </form>
+
     </section>
   )
 }
@@ -79,6 +94,7 @@ function Register(){
   const navigate = useNavigate();
 
   function handleRegister(e){
+
     e.preventDefault();
 
     console.log("REGISTERED USER:");
@@ -124,10 +140,6 @@ function Register(){
   )
 }
 
-/* ===========================
-PROTECTED ROUTE
-=========================== */
-
 function ProtectedRoute({auth, children}){
 
   if(!auth){
@@ -138,7 +150,7 @@ function ProtectedRoute({auth, children}){
 }
 
 /* ===========================
-GLOBAL LAYOUT
+LAYOUT
 =========================== */
 
 function Layout({setAuth}) {
@@ -172,7 +184,7 @@ function Layout({setAuth}) {
 }
 
 /* ===========================
-RIVNE SECTION
+RIVNE HOME
 =========================== */
 
 function RivneHome() {
@@ -198,6 +210,8 @@ function RivneHome() {
 
         <li><Link to="photos">City Photos</Link></li>
 
+        <li><Link to="schools">Schools</Link></li>
+
       </ul>
 
     </section>
@@ -205,6 +219,10 @@ function RivneHome() {
   )
 
 }
+
+/* ===========================
+ABOUT
+=========================== */
 
 function AboutRivne(){
 
@@ -215,8 +233,7 @@ function AboutRivne(){
       <h2>About Rivne</h2>
 
       <p>
-        First mentioned in 1283, Rivne gained Magdeburg rights in 1492,
-        strengthening its economic and administrative independence.
+        First mentioned in 1283, Rivne gained Magdeburg rights in 1492.
       </p>
 
       <p>
@@ -225,8 +242,7 @@ function AboutRivne(){
       </p>
 
       <p>
-        Today it is known for education, culture,
-        engineering industries and amber mining.
+        Today it is known for education, culture and amber mining.
       </p>
 
       <img src={flag} alt="Rivne Flag"/>
@@ -236,6 +252,10 @@ function AboutRivne(){
   )
 
 }
+
+/* ===========================
+MAIN ATTRACTION
+=========================== */
 
 function MainAttraction(){
 
@@ -248,21 +268,8 @@ function MainAttraction(){
       <img src={zoo} alt="Rivne Zoo"/>
 
       <p>
-        Founded in 1982, Rivne Zoo covers approximately
-        12 hectares and houses more than 150 species.
+        Founded in 1982, Rivne Zoo houses more than 150 species.
       </p>
-
-      <ul>
-
-        <li>Lions and Tigers</li>
-
-        <li>Bears and Wolves</li>
-
-        <li>Zebras and Kangaroos</li>
-
-        <li>Reptiles and Exotic Birds</li>
-
-      </ul>
 
     </section>
 
@@ -270,15 +277,17 @@ function MainAttraction(){
 
 }
 
+/* ===========================
+OTHER ATTRACTIONS
+=========================== */
+
 function OtherAttractions(){
 
   const attractions = [
 
     {name:"Rivne Regional Museum",desc:"Regional history exhibits"},
-
-    {name:"Shevchenko Park",desc:"A large green park"},
-
-    {name:"Rivne City Stadium",desc:"Main sports venue"}
+    {name:"Shevchenko Park",desc:"Central park"},
+    {name:"Rivne City Stadium",desc:"Sports arena"}
 
   ]
 
@@ -314,11 +323,9 @@ function AttractionDetail(){
 
   const attractions = [
 
-    {name:"Rivne Regional Museum",desc:"Museum with local history artifacts."},
-
+    {name:"Rivne Regional Museum",desc:"Museum with local artifacts."},
     {name:"Shevchenko Park",desc:"Central recreation park."},
-
-    {name:"Rivne City Stadium",desc:"Football and sport arena."}
+    {name:"Rivne City Stadium",desc:"Football arena."}
 
   ]
 
@@ -344,6 +351,10 @@ function AttractionDetail(){
 
 }
 
+/* ===========================
+PHOTOS
+=========================== */
+
 function Photos(){
 
   return(
@@ -353,8 +364,7 @@ function Photos(){
       <h2>City Photos</h2>
 
       <p>
-        Rivne offers scenic parks, historical buildings
-        and charming streets along the Ustya River.
+        Rivne offers scenic parks, historical buildings and charming streets.
       </p>
 
     </section>
@@ -364,7 +374,79 @@ function Photos(){
 }
 
 /* ===========================
-SHAKESPEARE SECTION
+SCHOOLS
+=========================== */
+
+function RivneSchools(){
+
+  const schools = [
+
+    {name:"Rivne Lyceum №1",img:liceum1},
+    {name:"Rivne Lyceum №2",img:liceum2},
+    {name:"Rivne Lyceum №3",img:liceum3},
+    {name:"Rivne Lyceum №4",img:liceum4},
+    {name:"Rivne Lyceum №5",img:liceum5},
+    {name:"Rivne Lyceum №6",img:liceum6},
+    {name:"Rivne Lyceum №7",img:liceum7},
+    {name:"Rivne Lyceum №8",img:liceum8},
+    {name:"Rivne Lyceum №9",img:liceum9},
+    {name:"Rivne Lyceum №10",img:liceum10},
+    {name:"Rivne Lyceum №11",img:liceum11},
+    {name:"Rivne Lyceum №12",img:liceum12}
+
+  ]
+
+  const [page,setPage] = useState(1)
+
+  const perPage = 4
+
+  const start = (page-1)*perPage
+  const visible = schools.slice(start,start+perPage)
+
+  const totalPages = Math.ceil(schools.length/perPage)
+
+  return(
+
+    <section>
+
+      <h2>Schools of Rivne</h2>
+
+      {visible.map((school,i)=>(
+
+        <div key={i}>
+
+          <h3>{school.name}</h3>
+
+          <img src={school.img} alt={school.name}/>
+
+        </div>
+
+      ))}
+
+      <div style={{marginTop:"20px"}}>
+
+        {Array.from({length:totalPages},(_,i)=>(
+
+          <button
+            key={i}
+            onClick={()=>setPage(i+1)}
+            style={{margin:"5px"}}
+          >
+            {i+1}
+          </button>
+
+        ))}
+
+      </div>
+
+    </section>
+
+  )
+
+}
+
+/* ===========================
+SHAKESPEARE
 =========================== */
 
 function ShakespeareHome(){
@@ -376,8 +458,8 @@ function ShakespeareHome(){
       <h1>William Shakespeare</h1>
 
       <p>
-        English playwright and poet widely regarded
-        as the greatest writer in the English language.
+        English playwright and poet widely regarded as the
+        greatest writer in the English language.
       </p>
 
       <ul>
@@ -406,7 +488,6 @@ function ShakespeareAbout(){
 
       <p>
         Born in Stratford-upon-Avon in 1564.
-        Shakespeare wrote 39 plays and 154 sonnets.
       </p>
 
     </section>
@@ -419,11 +500,9 @@ function ShakespeareWorks(){
 
   const works=[
 
-    {title:"Hamlet",desc:"A tragedy of revenge."},
-
-    {title:"Romeo and Juliet",desc:"A tragic love story."},
-
-    {title:"Macbeth",desc:"A tale of ambition."}
+    {title:"Hamlet"},
+    {title:"Romeo and Juliet"},
+    {title:"Macbeth"}
 
   ]
 
@@ -438,9 +517,7 @@ function ShakespeareWorks(){
         {works.map((w,i)=>(
 
           <li key={i}>
-
             <Link to={`/shakespeare/work/${i}`}>{w.title}</Link>
-
           </li>
 
         ))}
@@ -460,19 +537,15 @@ function WorkDetail(){
   const works=[
 
     {title:"Hamlet",desc:"Prince Hamlet seeks revenge."},
-
-    {title:"Romeo and Juliet",desc:"Two lovers from feuding families."},
-
-    {title:"Macbeth",desc:"A general consumed by ambition."}
+    {title:"Romeo and Juliet",desc:"Tragic love story."},
+    {title:"Macbeth",desc:"Ambition tragedy."}
 
   ]
 
   const work = works[id]
 
   if(!work){
-
     return <h2>Work Not Found</h2>
-
   }
 
   return(
@@ -498,8 +571,7 @@ function GlobeTheatre(){
       <h2>Globe Theatre</h2>
 
       <p>
-        The Globe Theatre in London hosted many
-        of Shakespeare's plays.
+        Historic theatre in London associated with Shakespeare.
       </p>
 
     </section>
@@ -509,7 +581,7 @@ function GlobeTheatre(){
 }
 
 /* ===========================
-APP ROUTER
+APP
 =========================== */
 
 function App(){
@@ -546,6 +618,8 @@ function App(){
           <Route path="attraction/:id" element={<AttractionDetail/>}/>
 
           <Route path="photos" element={<Photos/>}/>
+
+          <Route path="schools" element={<RivneSchools/>}/>
 
           <Route path="shakespeare" element={<ShakespeareHome/>}/>
 
