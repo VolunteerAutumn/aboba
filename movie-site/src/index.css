@@ -1,0 +1,65 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px crimson;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: crimson;
+  border: none;
+  color: white;
+  border-radius: 6px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #0d0d0d;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+}
+
+.links a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  color: crimson;
+}
